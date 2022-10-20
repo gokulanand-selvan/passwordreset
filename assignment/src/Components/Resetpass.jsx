@@ -14,7 +14,6 @@ export default function Resetpass() {
     const [error, setError] = useState(false)
     const [errorMessage, setErrorMessage] = useState("")
 
-
     const navigate = useNavigate();
 
     const handleSubmit = event => {
@@ -25,6 +24,11 @@ export default function Resetpass() {
             setError(true)
             setErrorMessage("Incorrect password")
         }
+        if (password.length < 8) {
+            setError(true)
+            setErrorMessage("Incorrect password")
+        }
+
         else {
             navigate("/success")
         }
