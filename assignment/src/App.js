@@ -13,7 +13,6 @@ function App() {
         <Route path="/" element={<Resetpass />} />
         <Route path="/success" element={<PasswordChanged />} />
       </Routes>
-
       <Bottom />
     </>
   );
